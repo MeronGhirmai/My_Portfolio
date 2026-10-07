@@ -2,444 +2,1323 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics Tag -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TN7KK1K7SL"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-TN7KK1K7SL');
     </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="NjhHLLyhoWJ5J-T6J-2BtGHxjlUmqf3SUOm6FRPrBcw" />
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#B97CF7">
+    <meta name="theme-color" content="#df9b35">
+    <meta name="color-scheme" content="dark">
+
+    <title>Meron Ghirmai Tewelde | Data Architect & Software Engineer</title>
     <meta name="description"
-        content="Meron Ghirmai | Portfolio, Visit and know about me & my projects/designs. I value simple content stcture, clean design patterns, and thoughtful interactions.">
-    <meta name="keywords" content="Meron Ghirmai, Meron Ghirmai portfolio">
-    <meta name="author" content="Meron Ghirmai">
-    <meta property="og:image" content="https://github.com/MeronGhirmai">
-    <link rel="shortcut icon" type="x-icon" href="LOGO-PNG.png">
-    <title>Meron Ghirmai | Portfolio </title>
+        content="Portfolio of Meron Ghirmai Tewelde — Data-driven Software Engineer, Database Architect, and AI/ML practitioner specializing in NLP for under-resourced languages and scalable systems. Inspired by the cinematic aesthetic of DUNE.">
+    <meta name="keywords"
+        content="Meron Ghirmai Tewelde, Software Engineer, Data Architect, AI/ML Engineer, NLP, Tigrinya, Ge'ez, Python, Android, SQL, Kampala, Uganda">
+    <meta name="author" content="Meron Ghirmai Tewelde">
+
+    <!-- Open Graph / Meta Protocol -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Meron Ghirmai Tewelde | Data Architect & Software Engineer">
+    <meta property="og:description"
+        content="Data-driven Software Engineer with over 4 years of experience in system architecture, AI/ML, and database engineering.">
+    <meta property="og:image" content="images/dune_hero.jpg">
+    <link rel="shortcut icon" type="image/png" href="images/LOGO-PNG.png">
+
+    <!-- Google Fonts & Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Fira+Code:wght@300;400;500;600&family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Vector Iconography (Boxicons) -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Core Dune Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- box icon -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- aos cdn -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- google fonts -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps">
 </head>
 
 <body>
+    <!-- Preloader: Arrakis Systems Calibration -->
     <div id="preloader">
-        <!-- < alt="Loading..." /> -->
+        <div class="loader-container">
+            <div class="dune-emblem">
+                <div class="dune-emblem-ring"></div>
+                <div class="dune-emblem-core"></div>
+            </div>
+            <div class="loader-text">ARRAKIS ARCHIVES // CALIBRATING</div>
+            <div class="loader-bar-wrap">
+                <div class="loader-bar-fill"></div>
+            </div>
+            <div class="loader-sub">SYNCHRONIZING TELEMETRY // MERON GHIRMAI</div>
+        </div>
     </div>
-    <audio loop="" id="audioPlayer" style="display:none">
+
+    <!-- Spice Melange Particle Physics Canvas -->
+    <canvas id="spice-canvas"></canvas>
+
+    <!-- Ambient Audio Element -->
+    <audio loop id="audioPlayer" preload="auto">
         <source src="sound.mp3" type="audio/mp3">
     </audio>
-    <noscript>Allow Javascript</noscript>
+
+    <!-- Top Telemetry Ribbon -->
+    <div class="telemetry-ribbon">
+        <div class="telemetry-item">
+            <span class="telemetry-indicator"></span>
+            <span>SECTOR: <span class="telemetry-highlight">KAMPALA [0.3476° N, 32.5825° E]</span></span>
+        </div>
+        <div class="telemetry-item">
+            <span>OPERATIVE: <span class="telemetry-highlight">MERON_GHIRMAI // CORE_V4.2</span></span>
+        </div>
+        <div class="telemetry-item">
+            <span>CYCLE: <span class="telemetry-highlight" id="cycle-time">--:--:-- EAT</span></span>
+            <span style="margin: 0 4px;">|</span>
+            <span>MELANGE INDEX: <span class="telemetry-highlight">99.8%</span></span>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
     <header class="header">
-        <a href="#" class="logo"><img src="./images/LOGO-PNG.png" alt="Nav bar logo"><span class="animate"
-                style="--i:1;"></span></a>
-        <div class="bx bx-menu" id="menu-icon">
-            <span class="animate" style="--i:2;"></span>
-        </div>
+        <a href="#home" class="logo-container">
+            <div class="logo-crest"></div>
+            <div class="logo-text-group">
+                <span class="logo-name">MERON GHIRMAI</span>
+                <span class="logo-subtitle">DATA ARCHITECT // ENGINEER</span>
+            </div>
+        </a>
+
         <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-            <span class="active-nav"></span>
-            <span class="animate" style="--i:2;"></span>
+            <a href="#home" class="nav-link active">01 // ORIGIN</a>
+            <a href="#about" class="nav-link">02 // OPERATIVE</a>
+            <a href="#experience" class="nav-link">03 // CHRONICLES</a>
+            <a href="#skills" class="nav-link">04 // ARSENAL</a>
+            <a href="#portfolio" class="nav-link">05 // ARTIFACTS</a>
+            <a href="#academics" class="nav-link">06 // ACADEMICS</a>
+            <a href="#contact" class="nav-link">07 // TRANSMIT</a>
         </nav>
+
+        <div class="nav-actions">
+            <!-- Dune Ambient Audio Controller -->
+            <div class="audio-controller" id="audioController" title="Toggle Dune Ambient Soundscape">
+                <div class="eq-bars">
+                    <span class="eq-bar"></span>
+                    <span class="eq-bar"></span>
+                    <span class="eq-bar"></span>
+                    <span class="eq-bar"></span>
+                </div>
+                <span class="audio-label" id="audioLabel">SOUNDSCAPE // DUNE</span>
+            </div>
+
+            <!-- Dune Thumper Pulse Button -->
+            <button class="thumper-btn" id="thumperTrigger" title="Activate Fremen Thumper Vibration">
+                <i class='bx bx-pulse thumper-icon'></i>
+                <span>THUMPER</span>
+            </button>
+        </div>
+
+        <button id="menu-toggle" aria-label="Toggle Navigation Menu">
+            <i class='bx bx-menu'></i>
+        </button>
     </header>
-    <!-- home section desingh -->
-    <section class="home show-animate" id="home">
-        <div class="home-content">
-            <h1><span class="kello">Hi,I'am</span> <span class="gradient-animation">Meron Ghirmai</span> <span
-                    class="animate" style="--i:2;"></span></h1>
-            <div class="text-animate">
-                <h3>Software Developer | Graphic Designer</h3>
-                <span class="animate" style="--i:3;"></span>
+
+    <!-- Thumper Shockwave Animation Element -->
+    <div class="thumper-shockwave" id="thumperShockwave"></div>
+
+    <!-- Thumper Fremen Wisdom Banner -->
+    <div class="thumper-banner" id="thumperBanner">
+        <div class="thumper-banner-title">◈ ARRAKIS TELEMETRY PULSE // FREMEN COMMUNIQUE</div>
+        <div class="thumper-banner-quote" id="thumperQuoteText">"The sleeper has awakened. The spice must flow."</div>
+    </div>
+
+    <main>
+        <!-- ==================================================================
+             SECTION 01: HERO / ORIGIN
+             ================================================================== -->
+        <section class="section-hero" id="home">
+            <div class="hero-wrapper">
+                <div class="hero-overlay-grid"></div>
+
+                <div class="hero-content">
+                    <div class="hero-badge-tag">
+                        <i class='bx bx-compass'></i>
+                        <span>ARRAKIS EXPEDITION // DATA & SYSTEMS SPECIALIST</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        MERON GHIRMAI <br>
+                        <span class="hero-title-highlight">TEWELDE</span>
+                    </h1>
+
+                    <div class="hero-role-rotator">
+                        DATA ARCHITECT &bull; AI / ML PRACTITIONER &bull; SOFTWARE ENGINEER
+                    </div>
+
+                    <p class="hero-creed">
+                        <em>"The mystery of life isn't a problem to solve, but a reality to experience."</em><br>
+                        Over four years architecting resilient software systems, database infrastructures,
+                        and neural NLP pipelines for under-resourced languages across emerging digital frontiers.
+                    </p>
+
+                    <!-- Telemetry HUD Counters -->
+                    <div class="telemetry-grid">
+                        <div class="telemetry-card">
+                            <div class="telemetry-value">04+</div>
+                            <div class="telemetry-label">Years Systems Dev</div>
+                        </div>
+                        <div class="telemetry-card">
+                            <div class="telemetry-value">3.82</div>
+                            <div class="telemetry-label">B.Sc. CS GPA (Honors)</div>
+                        </div>
+                        <div class="telemetry-card">
+                            <div class="telemetry-value">350K+</div>
+                            <div class="telemetry-label">Ge'ez NLP Tokens Curated</div>
+                        </div>
+                        <div class="telemetry-card">
+                            <div class="telemetry-value">99.8%</div>
+                            <div class="telemetry-label">Server & Network Uptime</div>
+                        </div>
+                    </div>
+
+                    <!-- Action Cluster -->
+                    <div class="hero-btn-cluster">
+                        <a href="#portfolio" class="btn-dune btn-dune-primary">
+                            <i class='bx bx-cube-alt'></i>
+                            <span>EXPLORE ARTIFACTS</span>
+                        </a>
+                        <a href="./CV/MGT_CV.pdf" class="btn-dune btn-dune-secondary" target="_blank" rel="noopener">
+                            <i class='bx bx-file-blank'></i>
+                            <span>ACCESS CV ARCHIVE</span>
+                        </a>
+                        <a href="#contact" class="btn-dune btn-dune-fremen">
+                            <i class='bx bx-broadcast'></i>
+                            <span>INITIATE TRANSMISSION</span>
+                        </a>
+                    </div>
+
+                    <!-- Social Channels Strip -->
+                    <div class="hero-social-links">
+                        <a href="https://github.com/MeronGhirmai" class="social-orb" target="_blank" rel="noopener"
+                            title="GitHub Archive">
+                            <i class='bx bxl-github'></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/meron-ghirmai-b545b2262" class="social-orb" target="_blank"
+                            rel="noopener" title="LinkedIn Frequency">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                        <a href="https://www.instagram.com/meri_g_photography?igsh=MTI2ZmY0cTF2dHQ1Zw=="
+                            class="social-orb" target="_blank" rel="noopener" title="The Pilgrim's Eye Photography">
+                            <i class='bx bxl-instagram'></i>
+                        </a>
+                        <a href="mailto:meronghirmai25@gmail.com" class="social-orb" title="Direct Frequency">
+                            <i class='bx bx-envelope'></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <p> "The Pilgrim's Eye | Pixel Nomad."
-                <span class="animate" style="--i:3;"></span>
-            </p>
-            <div class="btn-box"><a href="mailto:meronghirmai@gmail.com" class="btn">Hire Me</a>
-                <a href="./CV/MGT_CV.pdf" class="btn" target="_blank">MY CV</a>
-                <input type="checkbox" id="checkboxInput">
-                <label for="checkboxInput" class="toggleSwitch" onclick="playpause()">
+        </section>
 
-                    <div class="speaker"><svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 75 75">
-                            <path
-                                d="M39.389,13.769 L22.235,28.606 L6,28.606 L6,47.699 L21.989,47.699 L39.389,62.75 L39.389,13.769z"
-                                style="stroke:#fff;stroke-width:5;stroke-linejoin:round;fill:#fff;"></path>
-                            <path
-                                d="M48,27.6a19.5,19.5 0 0 1 0,21.4M55.1,20.5a30,30 0 0 1 0,35.6M61.6,14a38.8,38.8 0 0 1 0,48.6"
-                                style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round"></path>
-                        </svg></div>
-
-                    <div class="mute-speaker"><svg version="1.0" viewBox="0 0 75 75" stroke="#fff" stroke-width="5">
-                            <path d="m39,14-17,15H6V48H22l17,15z" fill="#fff" stroke-linejoin="round"></path>
-                            <path d="m49,26 20,24m0-24-20,24" fill="#fff" stroke-linecap="round"></path>
-                        </svg></div>
-
-                </label>
+        <!-- Litany Against Fear Strip -->
+        <div class="litany-strip">
+            <div class="litany-content">
+                <span class="litany-tag">◈ BENE GESSERIT CODE // THE LITANY AGAINST FEAR</span>
+                <p class="litany-text">
+                    "I must not fear. <span>Fear is the mind-killer.</span> Fear is the little-death that brings total
+                    obliteration. I will face my fear. Where the fear has gone there will be nothing. <span>Only I will
+                        remain.</span>"
+                </p>
             </div>
         </div>
 
-        <div class="home-sci">
-            <a href="https://www.instagram.com/meri_g_photography?igsh=MTI2ZmY0cTF2dHQ1Zw=="><i
-                    class='bx bxl-instagram'></i></a>
-            <a href="https://github.com/MeronGhirmai"><i class='bx bxl-github'></i></a>
-            <a href="https://www.linkedin.com/in/meron-ghirmai-b545b2262"><i class='bx bxl-linkedin'></i></a>
-            <span class="animate" style="--i:6;"></span>
+        <!-- ==================================================================
+             SECTION 02: ABOUT / OPERATIVE
+             ================================================================== -->
+        <section class="section-about" id="about">
+            <div class="section-header">
+                <span class="section-pretitle">DOSSIER // THE PILGRIM'S EYE</span>
+                <h2 class="section-title">THE <span>OPERATIVE</span></h2>
+                <div class="section-divider"></div>
+                <p class="section-desc">
+                    Merging mathematical rigor and robust software engineering to architect resilient systems in
+                    resource-constrained environments.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <!-- Operative Holographic Portrait Frame -->
+                <div class="about-visual-column">
+                    <div class="dune-portrait-frame">
+                        <div class="portrait-ring-outer"></div>
+                        <div class="portrait-ring-inner"></div>
+                        <div class="portrait-image-wrap">
+                            <img src="images/joo.jpg" alt="Meron Ghirmai Tewelde - Software Engineer & Data Architect">
+                        </div>
+                        <div class="portrait-telemetry-badge">
+                            ◈ OPERATIVE: MERON GHIRMAI // STATUS: ACTIVE
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Operative Biography & Technical Dossier -->
+                <div class="about-content-column">
+                    <h3 class="about-headline">
+                        Architecting Scalable Systems Across <span>Digital Dunes</span>
+                    </h3>
+
+                    <p class="about-bio">
+                        I am a <strong>data-driven IT professional and software engineer</strong> with over four years
+                        of hands-on experience in full-cycle software development, database architecture, and data
+                        infrastructure.
+                        Backed by rigorous quantitative foundations in <strong>statistics, probability, and linear
+                            algebra</strong>,
+                        I bring mathematical precision to modern software design.
+                    </p>
+
+                    <p class="about-bio">
+                        My work spans from engineering enterprise-grade relational database backends to curating
+                        first-of-its-kind natural language processing corpora for under-resourced languages (such as
+                        Ge'ez and Tigrinya).
+                        Whether optimizing SQL query plans for municipal registries or architecting Online &
+                        Offline-first mobile
+                        caching pipelines,
+                        I am dedicated to crafting resilient solutions that empower communities and bridge digital
+                        divides.
+                    </p>
+
+                    <!-- Technical Dossier Specs -->
+                    <div class="about-dossier-grid">
+                        <div class="dossier-item">
+                            <i class='bx bx-map-pin dossier-icon'></i>
+                            <div>
+                                <div class="dossier-title">Current Station</div>
+                                <div class="dossier-val">Kampala, Uganda</div>
+                            </div>
+                        </div>
+                        <div class="dossier-item">
+                            <i class='bx bx-brain dossier-icon'></i>
+                            <div>
+                                <div class="dossier-title">Core Disciplines</div>
+                                <div class="dossier-val">AI/ML, NLP & Database Architecture</div>
+                            </div>
+                        </div>
+                        <div class="dossier-item">
+                            <i class='bx bx-certification dossier-icon'></i>
+                            <div>
+                                <div class="dossier-title">Academic Degree</div>
+                                <div class="dossier-val">B.Sc. Computer Science (GPA 3.82)</div>
+                            </div>
+                        </div>
+                        <div class="dossier-item">
+                            <i class='bx bx-globe dossier-icon'></i>
+                            <div>
+                                <div class="dossier-title">Advanced Training</div>
+                                <div class="dossier-val">AIMS South Africa (AI/ML Program)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Capability Tags -->
+                    <div class="about-tags">
+                        <span class="tag-chip">Database Architecture</span>
+                        <span class="tag-chip">NLP & Text Tokenization</span>
+                        <span class="tag-chip">Online & Offline-First Mobile Systems</span>
+                        <span class="tag-chip">Data Infrastructure</span>
+                        <span class="tag-chip">Active Directory & Firewalls</span>
+                        <span class="tag-chip">Quantitative Modeling</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             SECTION 03: EXPERIENCE / CHRONICLES
+             ================================================================== -->
+        <section class="section-experience" id="experience">
+            <div class="section-header">
+                <span class="section-pretitle">TIMELINE // FIELD MISSIONS</span>
+                <h2 class="section-title">MISSION <span>CHRONICLES</span></h2>
+                <div class="section-divider"></div>
+                <p class="section-desc">
+                    A documented record of technical leadership, engineering deployments, and infrastructure
+                    optimization.
+                </p>
+            </div>
+
+            <div class="chronicles-timeline">
+                <!-- Mission 01: Mekane Hiwet Android Application -->
+                <div class="timeline-entry">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div class="timeline-role">Lead Engineer & Architect</div>
+                            <div class="timeline-time-badge">2025 — PRESENT (RELEASE: OCT 2026)</div>
+                        </div>
+                        <div class="timeline-company">
+                            <img src="images/mekane_hiwet_logo.png" alt="Mekane Hiwet Logo"
+                                style="width: 24px; height: 24px; object-fit: contain; filter: drop-shadow(0 0 8px rgba(223, 155, 53, 0.45));">
+                            <span>Mekane Hiwet Android Application &bull; Digital Linguistic Library</span>
+                        </div>
+                        <ul class="timeline-points">
+                            <li>
+                                <strong>Engineered a digital library and text-processing application</strong> tailored
+                                for the Tigrinya-speaking community to conquer severe regional connectivity constraints
+                                and complex Ge'ez script typography challenges.
+                            </li>
+                            <li>
+                                <strong>Architected an offline & Online-first infrastructure</strong> featuring local
+                                SQLite
+                                caching paired with real-time Firebase Firestore synchronization for resilient data
+                                access in low-bandwidth zones.
+                            </li>
+                            <li>
+                                <strong>Built a specialized custom image-rendering engine</strong> that rasterizes
+                                typography excerpts into shareable visual cards, maintaining pristine Ge'ez glyph
+                                ligatures.
+                            </li>
+                        </ul>
+                        <div class="timeline-tech-stack">
+                            <span>Android SDK</span>
+                            <span>Java</span>
+                            <span>SQLite</span>
+                            <span>Firebase Firestore</span>
+                            <span>Material Design 3</span>
+                            <span>Ge'ez Font Engine</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mission 02: Lead Developer & Software Engineer (Freelance) -->
+                <div class="timeline-entry">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div class="timeline-role">Lead Developer & Software Engineer</div>
+                            <div class="timeline-time-badge">JUN 2022 — 2025</div>
+                        </div>
+                        <div class="timeline-company">
+                            <i class='bx bx-code-block'></i>
+                            <span>Freelance Software Architecture & Digital Systems</span>
+                        </div>
+                        <ul class="timeline-points">
+                            <li>
+                                <strong>Architected bespoke web applications</strong>, database backends, and
+                                client-facing digital systems, ensuring strict data integrity, zero downtime, and robust
+                                security protocols.
+                            </li>
+                            <li>
+                                <strong>Engineered performant RESTful APIs</strong> and normalized relational data
+                                models
+                                in Python, Java (Spring Boot), and SQL to support client growth and digital
+                                transformation.
+                            </li>
+                            <li>
+                                <strong>Conducted end-to-end technical consultations</strong>, code reviews, and basic
+                                cybersecurity hardening assessments for client systems.
+                            </li>
+                        </ul>
+                        <div class="timeline-tech-stack">
+                            <span>Python</span>
+                            <span>Java (Spring Boot)</span>
+                            <span>MySQL</span>
+                            <span>Node.js</span>
+                            <span>REST APIs</span>
+                            <span>Cybersecurity</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mission 03: IT Specialist - Ministry of Land, Water & Environment -->
+                <div class="timeline-entry">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div class="timeline-role">IT Specialist & Database Administrator</div>
+                            <div class="timeline-time-badge">2020 — 2021</div>
+                        </div>
+                        <div class="timeline-company">
+                            <i class='bx bx-buildings'></i>
+                            <span>Ministry of Land, Water & Environment &bull; Asmara, Eritrea</span>
+                        </div>
+                        <ul class="timeline-points">
+                            <li>
+                                <strong>Designed and deployed centralized relational databases</strong> (SQL / MS
+                                Access) consolidating municipal land records, land registry datasets, and environmental
+                                monitoring metrics for over 150 daily active personnel.
+                            </li>
+                            <li>
+                                <strong>Administered enterprise Windows Server infrastructure</strong>, deploying
+                                Active Directory group policies and network firewalls achieving a sustained
+                                <strong>99.8% server uptime</strong>.
+                            </li>
+                            <li>
+                                <strong>Engineered automated query pipelines and reporting workflows</strong> to
+                                streamline routine departmental data retrieval, significantly cutting manual report
+                                generation turnaround time.
+                            </li>
+                        </ul>
+                        <div class="timeline-tech-stack">
+                            <span>SQL Databases</span>
+                            <span>MS Access</span>
+                            <span>Windows Server</span>
+                            <span>Active Directory</span>
+                            <span>Network Firewalls</span>
+                            <span>Data ETL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             SECTION 04: SKILLS / ARSENAL
+             ================================================================== -->
+        <section class="section-skills" id="skills">
+            <div class="section-header">
+                <span class="section-pretitle">IMPERIAL ARSENAL // CAPABILITIES</span>
+                <h2 class="section-title">TECHNICAL <span>ARSENAL</span></h2>
+                <div class="section-divider"></div>
+                <p class="section-desc">
+                    A synthesis of quantitative modeling, machine intelligence, scalable backend engineering, and
+                    modern infrastructure.
+                </p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Holocron I: Data Science & AI/ML -->
+                <div class="holocron-card">
+                    <div class="holocron-header">
+                        <div class="holocron-icon">
+                            <i class='bx bx-brain'></i>
+                        </div>
+                        <div>
+                            <div class="holocron-title">Data Science & AI/ML</div>
+                            <div class="holocron-subtitle">NEURAL MODELS & LANGUAGE CORPORA</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-items-list">
+                        <div class="skill-meter-wrap">
+                            <div class="skill-meter-header">
+                                <span>Python & PyTorch (AI / Deep Learning)</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-meter-bar">
+                                <div class="skill-meter-fill" data-width="90%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-meter-wrap">
+                            <div class="skill-meter-header">
+                                <span>Natural Language Processing (NLP) & Tokenization</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill-meter-bar">
+                                <div class="skill-meter-fill" data-width="88%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-meter-wrap">
+                            <div class="skill-meter-header">
+                                <span>Data Engineering, Pandas & Feature Pipelines</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="skill-meter-bar">
+                                <div class="skill-meter-fill" data-width="92%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-meter-wrap">
+                            <div class="skill-meter-header">
+                                <span>Quantitative Foundations (Statistics & Linear Algebra)</span>
+                                <span>94%</span>
+                            </div>
+                            <div class="skill-meter-bar">
+                                <div class="skill-meter-fill" data-width="94%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-tags-cloud">
+                        <span class="skill-badge">PyTorch</span>
+                        <span class="skill-badge">Pandas</span>
+                        <span class="skill-badge">NLP Modeling</span>
+                        <span class="skill-badge">Corpus Annotation</span>
+                        <span class="skill-badge">Statistical Inference</span>
+                        <span class="skill-badge">Linear Algebra</span>
+                    </div>
+                </div>
+
+                <!-- Holocron II: Programming & Database Systems -->
+                <div class="holocron-card">
+                    <div class="holocron-header">
+                        <div class="holocron-icon">
+                            <i class='bx bx-data'></i>
+                        </div>
+                        <div>
+                            <div class="holocron-title">Programming & Databases</div>
+                            <div class="holocron-subtitle">SCALABLE ARCHITECTURE & RELATIONAL SCHEMAS</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-items-list">
+                        <div class="skill-meter-wrap">
+                            <div class="skill-meter-header">
+                                <span>SQL, MySQL, PostgreSQL & SQLite</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="skill-meter-bar">
+                                <div class="skill-meter-fill" data-width="92%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-meter-wrap">
+                            <div class="skill-meter-header">
+                                <span>Java (Spring Boot & Microservices)</span>
+                                <span>82%</span>
+                            </div>
+                            <div class="skill-meter-bar">
+                                <div class="skill-meter-fill" data-width="82%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-meter-wrap">
+                            <div class="skill-meter-header">
+                                <span>Firebase Firestore & Cloud Sync</span>
+                                <span>86%</span>
+                            </div>
+                            <div class="skill-meter-bar">
+                                <div class="skill-meter-fill" data-width="86%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-meter-wrap">
+                            <div class="skill-meter-header">
+                                <span>C#, Node.js & REST API Architecture</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-meter-bar">
+                                <div class="skill-meter-fill" data-width="80%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-tags-cloud">
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">Java</span>
+                        <span class="skill-badge">Spring Boot</span>
+                        <span class="skill-badge">SQL Schemas</span>
+                        <span class="skill-badge">Firebase</span>
+                        <span class="skill-badge">REST APIs</span>
+                    </div>
+                </div>
+
+                <!-- Holocron III: Infrastructure & Cloud Telemetry -->
+                <div class="holocron-card">
+                    <div class="holocron-header">
+                        <div class="holocron-icon">
+                            <i class='bx bx-server'></i>
+                        </div>
+                        <div>
+                            <div class="holocron-title">Infrastructure & Cloud</div>
+                            <div class="holocron-subtitle">DEPLOYMENT, VIRTUALIZATION & SECURITY</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-items-list">
+                        <div class="skill-meter-wrap">
+                            <div class="skill-meter-header">
+                                <span>Windows Server & Active Directory Protocols</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-meter-bar">
+                                <div class="skill-meter-fill" data-width="90%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-meter-wrap">
+                            <div class="skill-meter-header">
+                                <span>Network Firewalls & Security Hardening</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-meter-bar">
+                                <div class="skill-meter-fill" data-width="85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-meter-wrap">
+                            <div class="skill-meter-header">
+                                <span>Android SDK & Material Design 3</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill-meter-bar">
+                                <div class="skill-meter-fill" data-width="88%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-meter-wrap">
+                            <div class="skill-meter-header">
+                                <span>Git, Docker & Cloud (AWS / Azure)</span>
+                                <span>82%</span>
+                            </div>
+                            <div class="skill-meter-bar">
+                                <div class="skill-meter-fill" data-width="82%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-tags-cloud">
+                        <span class="skill-badge">Docker</span>
+                        <span class="skill-badge">AWS</span>
+                        <span class="skill-badge">Azure</span>
+                        <span class="skill-badge">Git</span>
+                        <span class="skill-badge">Active Directory</span>
+                        <span class="skill-badge">Android SDK</span>
+                    </div>
+                </div>
+
+                <!-- Holocron IV: Frontend & Creative Systems -->
+                <div class="holocron-card">
+                    <div class="holocron-header">
+                        <div class="holocron-icon">
+                            <i class='bx bx-layer'></i>
+                        </div>
+                        <div>
+                            <div class="holocron-title">Frontend & Creative Systems</div>
+                            <div class="holocron-subtitle">CINEMATIC INTERFACES & GRAPHIC DESIGN</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-items-list">
+                        <div class="skill-meter-wrap">
+                            <div class="skill-meter-header">
+                                <span>Modern HTML5, CSS3 Glassmorphism & UI Design</span>
+                                <span>94%</span>
+                            </div>
+                            <div class="skill-meter-bar">
+                                <div class="skill-meter-fill" data-width="94%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-meter-wrap">
+                            <div class="skill-meter-header">
+                                <span>JavaScript (ES6+), Canvas & Micro-Animations</span>
+                                <span>86%</span>
+                            </div>
+                            <div class="skill-meter-bar">
+                                <div class="skill-meter-fill" data-width="86%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-meter-wrap">
+                            <div class="skill-meter-header">
+                                <span>Graphic Design & Typography Mastery</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill-meter-bar">
+                                <div class="skill-meter-fill" data-width="88%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-meter-wrap">
+                            <div class="skill-meter-header">
+                                <span>Responsive Cross-Platform Engineering</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-meter-bar">
+                                <div class="skill-meter-fill" data-width="90%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-tags-cloud">
+                        <span class="skill-badge">HTML5 / CSS3</span>
+                        <span class="skill-badge">JavaScript ES6+</span>
+                        <span class="skill-badge">UI/UX Architecture</span>
+                        <span class="skill-badge">Graphic Design</span>
+                        <span class="skill-badge">Material Design 3</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             SECTION 05: PROJECTS / ARTIFACTS
+             ================================================================== -->
+        <section class="section-portfolio" id="portfolio">
+            <div class="section-header">
+                <span class="section-pretitle">IMPERIAL ARCHIVES // DEPLOYMENTS</span>
+                <h2 class="section-title">FEATURED <span>ARTIFACTS</span></h2>
+                <div class="section-divider"></div>
+                <p class="section-desc">
+                    Engineered systems, AI linguistic datasets, and digital platforms built to solve real-world
+                    challenges.
+                </p>
+            </div>
+
+            <!-- Filter Controls -->
+            <div class="portfolio-controls">
+                <button class="filter-btn active" data-filter="all">ALL ARTIFACTS</button>
+                <button class="filter-btn" data-filter="ai">AI & NLP</button>
+                <button class="filter-btn" data-filter="mobile">MOBILE & SYSTEMS</button>
+                <button class="filter-btn" data-filter="web">WEB APPLICATIONS</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Project 01: Ge'ez NLP Corpus & Tokenizer -->
+                <div class="project-card" data-category="ai">
+                    <div class="project-thumb">
+                        <img src="images/geez_nlp.jpg" alt="Ge'ez NLP Corpus & Tokenizer Visualization">
+                        <div class="project-overlay-meta">
+                            <span class="project-cat-pill">AI / NLP RESEARCH</span>
+                            <span class="project-highlight-dot"></span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name">Ge'ez NLP Corpus & Custom Tokenizer</h3>
+                        <p class="project-summary">
+                            Curated, cleaned, and annotated 25,000+ sentences (~350,000 tokens) from digitized
+                            historical manuscripts to support NLP research for under-resourced languages. Open-sourced
+                            on GitHub.
+                        </p>
+                        <div class="project-stack-tags">
+                            <span>Python</span>
+                            <span>PyTorch</span>
+                            <span>NLP</span>
+                            <span>Tokenization</span>
+                            <span>Git</span>
+                        </div>
+                        <div class="project-footer-actions">
+                            <button class="inspect-trigger" data-inspect="geez-nlp">
+                                <i class='bx bx-search-alt'></i> INSPECT DOSSIER
+                            </button>
+                            <div class="project-ext-links">
+                                <a href="https://github.com/MeronGhirmai" target="_blank" rel="noopener"
+                                    title="GitHub Repository">
+                                    <i class='bx bxl-github'></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 02: Mekane Hiwet Android App -->
+                <div class="project-card" data-category="mobile">
+                    <div class="project-thumb">
+                        <img src="images/mekane_hiwet.jpg" alt="Mekane Hiwet Android App Interface">
+                        <div class="project-overlay-meta">
+                            <span class="project-cat-pill">ANDROID // ONLINE & OFFLINE</span>
+                            <span class="project-highlight-dot"></span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 0.8rem;">
+                            <img src="images/mekane_hiwet_logo.png" alt="Mekane Hiwet Logo"
+                                style="width: 32px; height: 32px; object-fit: contain; filter: drop-shadow(0 0 10px rgba(223, 155, 53, 0.45));">
+                            <h3 class="project-name" style="margin-bottom: 0;">Mekane Hiwet Android App</h3>
+                        </div>
+                        <p class="project-summary">
+                            A digital library and text-processing application built for the Tigrinya community with
+                            offline SQLite caching, real-time Firebase sync, and a custom Ge'ez typography rendering
+                            engine.
+                        </p>
+                        <div class="project-stack-tags">
+                            <span>Android SDK</span>
+                            <span>Java</span>
+                            <span>SQLite</span>
+                            <span>Firebase</span>
+                            <span>Material 3</span>
+                        </div>
+                        <div class="project-footer-actions">
+                            <button class="inspect-trigger" data-inspect="mekane-hiwet">
+                                <i class='bx bx-search-alt'></i> INSPECT DOSSIER
+                            </button>
+                            <div class="project-ext-links">
+                                <a href="https://github.com/MeronGhirmai" target="_blank" rel="noopener"
+                                    title="Repository Archive">
+                                    <i class='bx bxl-github'></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 03: Eritrean Postal Service Logistics Platform -->
+                <div class="project-card" data-category="mobile">
+                    <div class="project-thumb">
+                        <img src="images/postal_logistics.jpg" alt="Eritrean Postal Service Digital System Dashboard">
+                        <div class="project-overlay-meta">
+                            <span class="project-cat-pill">ENTERPRISE // LOGISTICS</span>
+                            <span class="project-highlight-dot"></span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name">Eritrean Postal Service System</h3>
+                        <p class="project-summary">
+                            Co-led a 4-person engineering team digitizing legacy paper workflows across 14 branches.
+                            Engineered relational database and SMS pipeline streamlining 5,000+ monthly shipments.
+                        </p>
+                        <div class="project-stack-tags">
+                            <span>SQL Schema</span>
+                            <span>REST APIs</span>
+                            <span>SMS Gateway</span>
+                            <span>Security Protocols</span>
+                        </div>
+                        <div class="project-footer-actions">
+                            <button class="inspect-trigger" data-inspect="eritrean-postal">
+                                <i class='bx bx-search-alt'></i> INSPECT DOSSIER
+                            </button>
+                            <div class="project-ext-links">
+                                <a href="https://github.com/MeronGhirmai" target="_blank" rel="noopener"
+                                    title="System Dossier">
+                                    <i class='bx bxl-github'></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 04: Dynamic QR Code Generator Platform -->
+                <div class="project-card" data-category="web">
+                    <div class="project-thumb">
+                        <img src="images/qqe.png" alt="Dynamic QR Code Generator Platform">
+                        <div class="project-overlay-meta">
+                            <span class="project-cat-pill">WEB UTILITY // LIVE</span>
+                            <span class="project-highlight-dot"></span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name">Dynamic QR Code Engine</h3>
+                        <p class="project-summary">
+                            Modern web utility allowing instant generation of customized QR codes for marketing
+                            campaigns, digital content, and inventory tracking with instant high-res vector downloads.
+                        </p>
+                        <div class="project-stack-tags">
+                            <span>JavaScript</span>
+                            <span>HTML5 Canvas</span>
+                            <span>SVG Engine</span>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="project-footer-actions">
+                            <button class="inspect-trigger" data-inspect="qr-gen">
+                                <i class='bx bx-search-alt'></i> INSPECT DOSSIER
+                            </button>
+                            <div class="project-ext-links">
+                                <a href="https://github.com/MeronGhirmai/QR-code-gen" target="_blank" rel="noopener"
+                                    title="GitHub Code">
+                                    <i class='bx bxl-github'></i>
+                                </a>
+                                <a href="https://meronghirmai.github.io/QR-code-gen/" target="_blank" rel="noopener"
+                                    title="Live Platform">
+                                    <i class='bx bx-link-external'></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 05: Netflix Cinematic Clone -->
+                <div class="project-card" data-category="web">
+                    <div class="project-thumb">
+                        <img src="images/net.jpg" alt="Netflix Cinematic Interface Clone">
+                        <div class="project-overlay-meta">
+                            <span class="project-cat-pill">FRONTEND // CINEMA</span>
+                            <span class="project-highlight-dot"></span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name">Cinematic Streaming Interface</h3>
+                        <p class="project-summary">
+                            Pixel-accurate web recreation of modern streaming architectures featuring responsive media
+                            carousels, hero backdrops, and fluid entertainment UI interactions.
+                        </p>
+                        <div class="project-stack-tags">
+                            <span>HTML5</span>
+                            <span>CSS3 Flexbox</span>
+                            <span>JavaScript</span>
+                            <span>Responsive UI</span>
+                        </div>
+                        <div class="project-footer-actions">
+                            <button class="inspect-trigger" data-inspect="netflix-clone">
+                                <i class='bx bx-search-alt'></i> INSPECT DOSSIER
+                            </button>
+                            <div class="project-ext-links">
+                                <a href="https://github.com/MeronGhirmai" target="_blank" rel="noopener"
+                                    title="Source Code">
+                                    <i class='bx bxl-github'></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 06: Atmospheric Weather Telemetry App -->
+                <div class="project-card" data-category="web">
+                    <div class="project-thumb">
+                        <img src="images/wa.jpg" alt="Atmospheric Weather Telemetry Web App">
+                        <div class="project-overlay-meta">
+                            <span class="project-cat-pill">REST API // TELEMETRY</span>
+                            <span class="project-highlight-dot"></span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name">Atmospheric Weather App</h3>
+                        <p class="project-summary">
+                            Real-time atmospheric telemetry web application providing live barometric pressure,
+                            temperatures, wind vectors, and meteorological forecasts via asynchronous REST APIs.
+                        </p>
+                        <div class="project-stack-tags">
+                            <span>Fetch API</span>
+                            <span>OpenWeather API</span>
+                            <span>CSS3 Animations</span>
+                            <span>JSON</span>
+                        </div>
+                        <div class="project-footer-actions">
+                            <button class="inspect-trigger" data-inspect="weather-app">
+                                <i class='bx bx-search-alt'></i> INSPECT DOSSIER
+                            </button>
+                            <div class="project-ext-links">
+                                <a href="https://github.com/MeronGhirmai" target="_blank" rel="noopener"
+                                    title="Source Code">
+                                    <i class='bx bxl-github'></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             SECTION 06: ACADEMICS & PEDIGREE
+             ================================================================== -->
+        <section class="section-academics" id="academics">
+            <div class="section-header">
+                <span class="section-pretitle">IMPERIAL ARCHIVES // PEDIGREE</span>
+                <h2 class="section-title">ACADEMIC <span>FOUNDATIONS</span></h2>
+                <div class="section-divider"></div>
+                <p class="section-desc">
+                    Advanced training in mathematical sciences, machine intelligence, and computer systems.
+                </p>
+            </div>
+
+            <div class="academics-grid">
+                <!-- Academy 01: AIMS South Africa -->
+                <div class="academy-card">
+                    <div class="academy-timeline-tag">
+                        <i class='bx bx-calendar'></i>
+                        <span>SEPTEMBER 2026 // ADVANCED TRACK</span>
+                    </div>
+                    <h3 class="academy-degree">AIMS South Africa — AI/ML Program</h3>
+                    <div class="academy-institution">
+                        African Institute for Mathematical Sciences &bull; South Africa
+                    </div>
+                    <p class="academy-details">
+                        Selected for the intensive track in Artificial Intelligence and Machine Learning foundations,
+                        complemented by rigorous Google DeepMind coursework in AI Research Foundations and Language
+                        Model Training.
+                    </p>
+                    <div class="coursework-box">
+                        <span class="coursework-label">Advanced Modules:</span>
+                        <div class="coursework-text">
+                            Deep Learning Architectures, Transformer Mechanics, Mathematical Foundations of Machine
+                            Learning, Language Model Fine-Tuning.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Academy 02: Eritrean Institute of Technology -->
+                <div class="academy-card">
+                    <div class="academy-timeline-tag">
+                        <i class='bx bx-calendar'></i>
+                        <span>GRADUATED // HIGH HONORS</span>
+                    </div>
+                    <h3 class="academy-degree">B.Sc. in Computer Science (GPA 3.82 / 4.00)</h3>
+                    <div class="academy-institution">
+                        Eritrean Institute of Technology &bull; Asmara, Eritrea
+                    </div>
+                    <p class="academy-details">
+                        Graduated with high honors. Completed rigorous quantitative and computational curriculum
+                        focusing on algorithm design, systems software, and distributed databases.
+                    </p>
+                    <div class="coursework-box">
+                        <span class="coursework-label">Quantitative Coursework:</span>
+                        <div class="coursework-text">
+                            Statistics, Probability Theory, Linear Algebra, Numerical Methods, Algorithm Design &
+                            Complexity, Database Management Systems, Computer Networks, Software Engineering.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Linguistic & Passions (Fremen Culture) -->
+            <div class="culture-wrap">
+                <div class="culture-card">
+                    <h4 class="culture-card-title">
+                        <i class='bx bx-conversation'></i>
+                        <span>Linguistic Fluency</span>
+                    </h4>
+                    <div class="languages-list">
+                        <div class="language-item">
+                            <span class="lang-name">Tigrinya</span>
+                            <span class="lang-level">NATIVE PROFICIENCY</span>
+                        </div>
+                        <div class="language-item">
+                            <span class="lang-name">English</span>
+                            <span class="lang-level">PROFESSIONAL FLUENT</span>
+                        </div>
+                        <div class="language-item">
+                            <span class="lang-name">Amharic</span>
+                            <span class="lang-level">FLUENT</span>
+                        </div>
+                        <div class="language-item">
+                            <span class="lang-name">French</span>
+                            <span class="lang-level">ELEMENTARY (A2)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="culture-card">
+                    <h4 class="culture-card-title">
+                        <i class='bx bx-compass'></i>
+                        <span>Passions & Disciplines</span>
+                    </h4>
+                    <div class="interests-grid">
+                        <div class="interest-item">
+                            <i class='bx bx-camera interest-icon'></i>
+                            <div class="interest-label">Photography ("Pilgrim's Eye")</div>
+                        </div>
+                        <div class="interest-item">
+                            <i class='bx bx-football interest-icon'></i>
+                            <div class="interest-label">Football & Strategy</div>
+                        </div>
+                        <div class="interest-item">
+                            <i class='bx bx-book-open interest-icon'></i>
+                            <div class="interest-label">Reading & Sci-Fi Lore</div>
+                        </div>
+                        <div class="interest-item">
+                            <i class='bx bx-network-chart interest-icon'></i>
+                            <div class="interest-label">Ethiopic NLP Research</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             SECTION 07: CONTACT / TRANSMISSION TERMINAL
+             ================================================================== -->
+        <section class="section-contact" id="contact">
+            <div class="section-header">
+                <span class="section-pretitle">COMMUNICATION FREQUENCIES // TRANSMIT</span>
+                <h2 class="section-title">INITIATE <span>TRANSMISSION</span></h2>
+                <div class="section-divider"></div>
+                <p class="section-desc">
+                    Open for high-impact software engineering roles, AI/ML research collaborations, and technical
+                    consulting.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Transmission Coordinates Dossier -->
+                <div class="transmission-dossier">
+                    <h3 class="dossier-headline">Operational Coordinates</h3>
+                    <p class="dossier-subtext">
+                        Reach out across secure frequencies. Available for remote engagements worldwide, on-site
+                        collaboration, and relocation.
+                    </p>
+
+                    <div class="comm-channels">
+                        <div class="comm-node">
+                            <div class="comm-node-icon">
+                                <i class='bx bx-envelope'></i>
+                            </div>
+                            <div class="comm-node-meta">
+                                <span class="comm-label">Direct Frequency (Email)</span>
+                                <a href="mailto:meronghirmai25@gmail.com" class="comm-val">meronghirmai25@gmail.com</a>
+                                <button class="btn-dune btn-dune-secondary"
+                                    style="padding: 3px 8px; font-size: 0.65rem; margin-top: 4px; width: fit-content;"
+                                    data-copy="meronghirmai25@gmail.com">
+                                    <i class='bx bx-copy'></i> COPY EMAIL
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="comm-node">
+                            <div class="comm-node-icon">
+                                <i class='bx bx-phone-call'></i>
+                            </div>
+                            <div class="comm-node-meta">
+                                <span class="comm-label">Encrypted Line (Mobile / WhatsApp)</span>
+                                <a href="tel:+2567065773626" class="comm-val">+256 706 5773 626</a>
+                                <button class="btn-dune btn-dune-secondary"
+                                    style="padding: 3px 8px; font-size: 0.65rem; margin-top: 4px; width: fit-content;"
+                                    data-copy="+2567065773626">
+                                    <i class='bx bx-copy'></i> COPY NUMBER
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="comm-node">
+                            <div class="comm-node-icon">
+                                <i class='bx bx-current-location'></i>
+                            </div>
+                            <div class="comm-node-meta">
+                                <span class="comm-label">Current Deployment</span>
+                                <span class="comm-val">Kampala, Uganda</span>
+                            </div>
+                        </div>
+
+                        <div class="comm-node">
+                            <div class="comm-node-icon">
+                                <i class='bx bxl-github'></i>
+                            </div>
+                            <div class="comm-node-meta">
+                                <span class="comm-label">Code Repository Archive</span>
+                                <a href="https://github.com/MeronGhirmai" class="comm-val" target="_blank"
+                                    rel="noopener">github.com/MeronGhirmai</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Subspace Transmission Form Console -->
+                <div class="transmission-form-console">
+                    <form action="https://formsubmit.co/meronghirmai25@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New Transmission from Meron Portfolio!">
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label class="input-label" for="full-name">
+                                    <i class='bx bx-user'></i> OPERATIVE NAME
+                                </label>
+                                <input class="dune-input" id="full-name" name="full_name" type="text"
+                                    placeholder="e.g. Paul Atreides" required>
+                            </div>
+                            <div class="input-group">
+                                <label class="input-label" for="email-address">
+                                    <i class='bx bx-at'></i> COMM FREQUENCY (EMAIL)
+                                </label>
+                                <input class="dune-input" id="email-address" name="email_address" type="email"
+                                    placeholder="e.g. operative@arrakis.net" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label class="input-label" for="mobile-number">
+                                    <i class='bx bx-phone'></i> CONTACT NUMBER (OPTIONAL)
+                                </label>
+                                <input class="dune-input" id="mobile-number" name="mobile_number" type="tel"
+                                    placeholder="+256 ...">
+                            </div>
+                            <div class="input-group">
+                                <label class="input-label" for="subject-line">
+                                    <i class='bx bx-tag'></i> TRANSMISSION SUBJECT
+                                </label>
+                                <input class="dune-input" id="subject-line" name="subject" type="text"
+                                    placeholder="Project Collaboration / Engineering Opportunity" required>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label class="input-label" for="message-payload">
+                                <i class='bx bx-message-detail'></i> TRANSMISSION PAYLOAD
+                            </label>
+                            <textarea class="dune-textarea" id="message-payload" name="message"
+                                placeholder="Detail your operational requirements, project scope, or inquiry..."
+                                required></textarea>
+                        </div>
+
+                        <div class="form-submit-row">
+                            <button type="submit" class="btn-dune btn-dune-primary">
+                                <i class='bx bx-paper-plane'></i>
+                                <span>TRANSMIT MESSAGE</span>
+                            </button>
+                            <span class="form-status-msg">◈ ENCRYPTED END-TO-END VIA PROTOCOL</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Project Transmission Dossier Modal -->
+    <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-dialog">
+            <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Dossier">
+                <i class='bx bx-x'></i>
+            </button>
+
+            <div class="modal-header-meta">
+                <span class="modal-badge" id="modalBadge">CLASSIFIED ARTIFACT</span>
+                <h3 class="modal-title" id="modalTitle">Project Title</h3>
+            </div>
+
+            <img class="modal-banner-img" id="modalBanner" src="images/geez_nlp.jpg" alt="Project Banner">
+
+            <div class="modal-section-title">◈ Mission Overview & Architecture</div>
+            <p class="modal-desc" id="modalSummary">Project summary description.</p>
+
+            <div class="modal-section-title">◈ Key Technical Achievements</div>
+            <ul class="modal-highlights" id="modalHighlights">
+                <!-- Injected via script.js -->
+            </ul>
+
+            <div class="modal-section-title">◈ Technical Stack</div>
+            <div class="modal-tags" id="modalTags">
+                <!-- Injected via script.js -->
+            </div>
+
+            <div class="modal-actions">
+                <a href="#" class="btn-dune btn-dune-primary" id="modalGithubLink" target="_blank" rel="noopener">
+                    <i class='bx bxl-github'></i> VIEW REPOSITORY ARCHIVE
+                </a>
+                <a href="#" class="btn-dune btn-dune-fremen" id="modalLiveLink" target="_blank" rel="noopener">
+                    <i class='bx bx-link-external'></i> LAUNCH LIVE INTERFACE
+                </a>
+            </div>
         </div>
-        <div class="home-imghover"></div>
-        <span class="animate home-img" style="--i:7;"></span>
-    </section>
-    <!-- about section design  -->
+    </div>
 
-    <section class="about" id="about" data-aos="fade-up">
-        <h2 class="heading" data-aos="fade-up"><span class="jello">About</span>
-            <span class="mello">Me</span>
-            <!-- <span class="animate scroll" style="--i:1;"></span> -->
-        </h2>
-        <div class="about-img" data-aos="fade-up">
-            <img src="images/joo.jpg" alt="Image of Meron Ghirmai">
-            <span class="circle-spin"></span>
-            <!-- <span class="animate scroll" style="--i:2;"></span> -->
-        </div>
-        <div class="about-content" data-aos="fade-up">
-            <h3>Software Developer !
-                <!-- <span class="animate scroll" style="--i:3;"></span> -->
-            </h3>
-            <p>
-                "I am an aspiring Software developing professional with a strong background in Computer science and
-                Graphic designs. I have a proven ability in Programong, modeling, data analysis using programming
-                languages, and crafting compelling presentations. My strengths lie in effective communication,
-                leadership, problem-solving, and decision-making. I am enthusiastic about leveraging my technical skills
-                and financial expertise to excel in the investment banking industry."
-                <!-- <span class="animate scroll" style="--i:4;"></span> -->
-            </p>
-
-        </div>
-    </section>
-    <!-- education section design  -->
-    <section class="education" id="education" data-aos="fade-up">
-        <h2 class="heading"><span class="kello">My </span><span class="jello"> Journey</span></h2>
-        <div class="education-row" data-aos="fade-up">
-            <div class="education-column" data-aos="fade-up">
-                <h3 class="title">Education</h3>
-                <div class="education-box" data-aos="fade-up">
-                    <div class="education-content" data-aos="fade-up">
-                        <div class="content" data-aos="fade-up">
-                            <div class="year" data-aos="fade-up"><i class='bx bxs-calendar'></i>2016-2020</div>
-                            <h3>
-                                Bsc. Computer Science - Eritrean institute of Technology
-                            </h3>
-                            <p>
-                                I completed my Bsc degree at Eritrean Institute of Technology, where I developed a
-                                strong academic foundation and a passion for learning."
-                            </p>
-                        </div>
-                    </div>
-                    <div class="education-content" data-aos="fade-up">
-                        <div class="content" data-aos="fade-up">
-                            <div class="year" data-aos="fade-up"><i class='bx bxs-calendar'></i>2018-2019</div>
-                            <h3>
-                                Enterprise Cyber Security Fundamentals: Short Course
-                            </h3>
-                            <p>
-                                "Having laid the educational groundwork at Eritrean Institute of Technology, I continued
-                                my academic journey by completing my Short Courses online at the time of gathering my
-                                Degree. This pivotal phase further enriched my knowledge and helped me to shape my
-                                academic and personal growth."
-                            </p>
-                        </div>
-                    </div>
-                    <div class="education-content" data-aos="fade-up">
-                        <div class="content" data-aos="fade-up">
-                            <div class="year" data-aos="fade-up"><i class='bx bxs-calendar'></i>2025-2026</div>
-                            <h3>
-                                Java Backend Developer - Spring Boot & Microservices Developer
-                            </h3>
-                            <p>
-                                I am developing my skills in Java Backend development, specializing in Spring Boot and
-                                Microservices architecture. I have hands-on experience in building scalable and
-                                efficient backend solutions, leveraging the power of Java to create robust applications.
-                                My expertise includes designing RESTful APIs, implementing microservices-based
-                                architectures, and utilizing Spring Boot to streamline development processes. I am
-                                passionate about staying up-to-date with the latest trends and best practices in Java
-                                development to deliver high-quality software solutions.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+    <!-- ==================================================================
+         FOOTER: THE ETERNAL SANDS
+         ================================================================== -->
+    <footer class="footer-dune">
+        <div class="footer-inner">
+            <div class="footer-quote-box">
+                <p class="footer-quote">
+                    "A process cannot be understood by stopping it. Understanding must move with the flow of the
+                    process, must join it and flow with it."
+                </p>
+                <div class="footer-author">— FRANK HERBERT, DUNE</div>
             </div>
 
-            <div class="education-column" data-aos="fade-up">
-                <h3 class="title" data-aos="fade-up">Experience</h3>
-                <div class="education-box" data-aos="fade-up">
-                    <div class="education-content" data-aos="fade-up">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar'></i>2020-2021</div>
-                            <h3>
-                                Ministry of Land, Water & Environment – Asmara, Eritrea
-                            </h3>
-                            <p>
-                                • Designed and implemented database systems to manage accounting and employee data.
-                                • Managed Windows Server–based networks with Active Directory and firewall
-                                configurations.
-                                • Led user training on network security and system use.
-                                • Improved data efficiency and system reliability across departments.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="education-content" data-aos="fade-up">
-                        <div class="content" data-aos="fade-up">
-                            <div class="year" data-aos="fade-up"><i class='bx bxs-calendar'></i>2021-2023</div>
-                            <h3>
-                                Social Media Analytics & Communications Officer #Parttime
-                            </h3>
-                            <p>
-                                • Collected and analyzed engagement data to support digital campaigns.
-                                • Developed visual content and managed online communications across platforms.
-                                • Implemented security and privacy measures for online accounts.
-
-                            </p>
-                        </div>
-                    </div>
-                    <div class="education-content" data-aos="fade-up">
-                        <div class="content" data-aos="fade-up">
-                            <div class="year" data-aos="fade-up"><i class='bx bxs-calendar'></i>2023-2025</div>
-                            <h3>
-                                Freelance Web Developer & Graphic Designer
-                            </h3>
-                            <p>
-                                • Designed secure, user-friendly websites for small businesses.
-                                • Created branding materials and provided technical consultation.
-                                • Conducted basic cybersecurity awareness sessions for clients.
-                            </p>
-                        </div>
-                    </div>
+            <div class="footer-bottom-bar">
+                <div class="footer-copy">
+                    DESIGNED & ARCHITECTED BY MERON GHIRMAI TEWELDE &copy; 2026 // ALL RIGHTS RESERVED
                 </div>
-            </div>
-
-
-        </div>
-    </section>
-
-    <!-- skills section design  -->
-
-    <section class="skills" id="skills" data-aos="fade-up">
-        <h2 class="heading" data-aos="fade-up"> <span class="kello">My</span> <span class="jello">Skills</span></h2>
-        <div class="skills-row" data-aos="fade-up">
-            <div class="skills-column" data-aos="fade-up">
-                <h3 class="title" data-aos="fade-up">Coding Skills</h3>
-                <div class="skills-box" data-aos="fade-up">
-                    <div class="skills-content" data-aos="fade-up">
-                        <div class="progress" data-aos="fade-up">
-                            <h3>HTML/css <span>90%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress" data-aos="fade-up">
-                            <h3>Java <span>80%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress" data-aos="fade-up">
-                            <h3>Python <span>65%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress" data-aos="fade-up">
-                            <h3>JavaScript <span>75%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-                    </div>
+                <div class="footer-copy">
+                    LOCATION: KAMPALA, UGANDA &bull; MERONGHIRMAI25@GMAIL.COM &bull; +256 706 5773 626
                 </div>
-            </div>
-
-            <div class="skills-column" data-aos="fade-up">
-                <h3 class="title" data-aos="fade-up">Professional Skills</h3>
-                <div class="skills-box" data-aos="fade-up">
-                    <div class="skills-content" data-aos="fade-up">
-
-                        <div class="progress" data-aos="fade-up">
-                            <h3>Web Development <span>67%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress" data-aos="fade-up">
-                            <h3>Graphic Design <span>85%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress" data-aos="fade-up">
-                            <h3>Java Backend developer<span>70%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress" data-aos="fade-up">
-                            <h3>Spring Boot & Microservices Developer <span>73%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-                    </div>
-                </div>
+                <a href="#home" class="footer-scroll-top" title="Ascend to Origin">
+                    <i class='bx bx-up-arrow-alt'></i>
+                </a>
             </div>
         </div>
-    </section>
-
-    <!-- portfolio section desing  -->
-
-    <section class="portfolio" id="portfolio">
-        <h2 class="heading">Latest <span>Project</span></h2>
-        <div class="portfolio-container">
-            <div class="portfolio-box">
-                <img src="images/net.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Netflix Clone</h4>
-                    <p>I created the Netflix Clone website using HTML and CSS</p>
-                    <a href='#'><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="images/wa.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Weather App</h4>
-                    <p>This web app shows the weather condition of any city</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="images/little_bay.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>E-commerce Website</h4>
-                    <p> Work in progress</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="images/qqe.png" alt="">
-                <div class="portfolio-layer">
-                    <h4>QR Code Generator</h4>
-                    <p>This QR code generation platform allows users to create custom QR codes for various use cases
-                        such as marketing campaigns, digital content, and inventory management etc.</p>
-                    <a href="https://meronghirmai.github.io/QR-code-gen/" target="_blank"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="images/ae.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Coming Soon</h4>
-                    <p> Work in progress</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-
-            <div class="portfolio-box">
-                <img src="images/ae.jpg" alt="">
-                <div class="portfolio-layer">
-                    <h4>Coming Soon</h4>
-                    <p> Work in progress</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact section design  -->
-    <section class="contact" id="contact" data-aos="fade-up">
-        <h2 class="heading" data-aos="fade-up"><span class="mello">Contact </span><span class="kello"> Me</span></h2>
-
-        <form action="https://formsubmit.co/meronghirmai25@gmail.com" method="post">
-
-            <div class="input-box">
-                <div class="input-field">
-                    <input name="full-name" type="text" placeholder="Full Name" required>
-                    <span class="focus"></span>
-                </div>
-                <div class="input-field">
-                    <input name="email-address" type="text" placeholder="Email Address" required>
-                    <span class="focus"></span>
-                </div>
-            </div>
-
-            <div class="input-box">
-                <div class="input-field">
-                    <input name="number" type="number" placeholder="Mobile Number" required>
-                    <span class="focus"></span>
-                </div>
-                <div class="input-field">
-                    <input name="email-sub" type="text" placeholder="Email Subject" required>
-                    <span class="focus"></span>
-                </div>
-            </div>
-
-            <div class="textarea-field">
-                <textarea name="Message" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
-                <span class="focus"></span>
-            </div>
-            <div class="btn-box btns">
-                <button type="submit" class="btn">Submit</button>
-            </div>
-            <input type="hidden" name="_captcha" value="false">
-        </form>
-    </section>
-
-    <!-- footer design -->
-    <footer class="footer">
-        <div class="footer-background">
-            <div class="footer-blob"></div>
-            <div class="footer-foreground">
-                <div class="footer-quote">
-                    <!-- <img class="coding-screen" src="./images/coding-screen.png" alt="CodingScreen"> -->
-                    <div class="quote-wrapper">"<p class="shine">Learn,</p>
-                        <p class="shine">lead,</p>
-                        <p>let</p>
-                        <p class="shine">success</p>
-                        <p>follow.</p>"
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <div class="footer-text">
-
-                        <p>Design and built by Meron Ghirmai &copy; 2025 | All Rights Reserved.</p>
-                    </div>
-                    <div class="footer-iconTop">
-                        <a href="#"><img class="rocketIcon" src="./images/rocket.png" alt="BackToTop"></a>
-                    </div>
-                </div>
-            </div>
-
     </footer>
 
-
-
+    <!-- Core Interactive Script -->
     <script src="js/script.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
-
-    <!-- for aos animation -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-
-
 </body>
 
 </html>

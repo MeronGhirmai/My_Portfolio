@@ -287,8 +287,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Overcame severe data scarcity hurdles through automated linguistic cleaning pipelines"
             ],
             stack: ['Python', 'PyTorch', 'NLP', 'Data Engineering', 'Ethiopic Syllabary', 'Tokenization', 'Git'],
-            github: 'https://github.com/MeronGhirmai',
-            live: '#'
+            github: 'https://github.com/MeronGhirmai/geez-nlp-corpus-tokenizer',
+            live: 'https://meronghirmai.github.io/geez-nlp-corpus-tokenizer/',
+            liveLabel: 'RUN WEB EXPLORER',
+            liveIcon: 'bx-link-external'
         },
         'mekane-hiwet': {
             badge: 'MOBILE ENGINEERING // ONLINE & OFFLINE',
@@ -301,11 +303,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Built interactive Daily Bread, Scripture readers (መንበቢ መጽሓፍ ቅዱስ), and Daily Verse cards (ጥቕሲ ዕለት)",
                 "Integrated custom image-rendering engine for generating high-resolution excerpt quote cards for social sharing",
                 "Incorporated official Mekane Hiwet Cross and Heart emblem and Material Design 3 tactile dark mode",
-                "Scheduled for public production release: October 2026"
+                "Published and live on the Google Play Store for the global Tigrinya community"
             ],
             stack: ['Android SDK', 'Java', 'SQLite', 'Firebase Firestore', 'Material Design 3', 'Ge\'ez Rendering Engine'],
             github: 'https://github.com/MeronGhirmai',
-            live: '#'
+            live: 'https://play.google.com/store/apps/details?id=org.mekanehiwet.mekanehiwet&pcampaignid=web_share',
+            liveLabel: 'VIEW ON GOOGLE PLAY',
+            liveIcon: 'bxl-play-store'
         },
         'eritrean-postal': {
             badge: 'ENTERPRISE SYSTEMS // LOGISTICS & SMS PIPELINE',
@@ -417,6 +421,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (modalLiveLink) {
             modalLiveLink.href = data.live;
             modalLiveLink.style.display = (data.live && data.live !== '#') ? 'inline-flex' : 'none';
+            const liveText = data.liveLabel || 'LAUNCH LIVE INTERFACE';
+            const liveIcon = data.liveIcon || 'bx-link-external';
+            modalLiveLink.innerHTML = `<i class='bx ${liveIcon}'></i> ${liveText}`;
         }
 
         projectModal.classList.add('open');
